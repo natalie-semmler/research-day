@@ -12,7 +12,6 @@
     width: 25%;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
-    cursor: pointer;
     animation: fadeIn 1s;
     transition: .3s all;
     margin: 15px;
@@ -29,6 +28,7 @@
 .card__thumbnail {
   background-color: gray;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .card__thumbnail__image {
@@ -43,6 +43,7 @@
 .card__title {
   font-size: 20px;
   color: #943001;
+  cursor: pointer;
   }
 
 .card__modal {
@@ -54,8 +55,8 @@
   top: 0;
   left: 0;
   overflow: hidden;
-  display: none;
   animation: fadeIn .2s;
+  visibility: hidden;
 }
 
 .card__modal__content {

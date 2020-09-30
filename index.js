@@ -29,3 +29,20 @@ modals[triggerIndex].classList.toggle('show-modal');
 trigger.addEventListener("click", toggleModal);
 closeButtons[triggerIndex].addEventListener("click", toggleModal);
 }
+
+// Get each modal and close button
+const triggersTitle = document.getElementsByClassName('trigger__title');
+const triggerArrayTitle = Array.from(triggersTitle).entries();
+const modalsTitle = document.getElementsByClassName('card__modal');
+const closeButtonsTitle = document.getElementsByClassName('card__modal__close');
+
+// Then use `for...of`-loop with the index of each item in `triggerArray` for listening to a click event which toggles each modal to open and close
+for (let [index, trigger__title] of triggerArrayTitle) {
+let triggerIndexTitle = index;
+function toggleModalTitle() {
+  // Optionally toggle a class for CSS animations
+modals[triggerIndexTitle].classList.toggle('show-modal');
+}
+trigger.addEventListener("click", toggleModalTitle);
+closeButtons[triggerIndexTitle].addEventListener("click", toggleModal);
+}
