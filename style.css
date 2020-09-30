@@ -72,6 +72,16 @@
   top: 5%;
   cursor: pointer;
 }
+
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+
 figure.card__thumbnail {
   width: 100%;
   overflow: hidden;
