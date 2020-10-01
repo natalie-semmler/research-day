@@ -31,7 +31,7 @@ closeButtons[triggerIndex].addEventListener("click", toggleModal);
 }
 
 // Get each modal and close button
-const triggersTitle = document.getElementsByClassName('trigger__title');
+/*const triggersTitle = document.getElementsByClassName('trigger__title');
 const triggerArrayTitle = Array.from(triggersTitle).entries();
 const modalsTitle = document.getElementsByClassName('card__modal');
 const closeButtonsTitle = document.getElementsByClassName('card__modal__close');
@@ -45,4 +45,4 @@ modalsTitle[triggerIndexTitle].classList.toggle('show-modal');
 }
 trigger__title.addEventListener("click", toggleModalTitle);
 closeButtonsTitle[triggerIndexTitle].addEventListener("click", toggleModalTitle);
-}
+}*/
