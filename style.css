@@ -5,7 +5,7 @@
   flex-direction: row;
   justify-content: center;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 60px;
 }
 .card {
     height: 325px;
@@ -112,7 +112,7 @@ figure.card__thumbnail img {
 }
   .typical-page__hero-video {
     width: 100%;
-    background-color: gray;
+    background-color: #ffffff;
     margin: 0 auto 30px;
     max-width: 1200px;
 }
@@ -120,6 +120,7 @@ figure.card__thumbnail img {
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
+    margin-bottom: 30px;
 }
 .typical-page__hero-iframe iframe {
     position: absolute;
