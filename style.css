@@ -24,7 +24,11 @@
 .card:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
 }
-
+.card li, .card p, .card ul {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 1.125em;
+}
 .card a {
   color: #c7531c;
 }
@@ -49,9 +53,11 @@
     padding-right: 10px;
 }
 .card__title {
-  font-size: 20px;
-  color: #943001;
+  font-size: 1.2em;
+  color: #1f7f9b;
   cursor: pointer;
+  font-weight: 700;
+  margin-top: 15px;
   }
 
 .card__modal {
