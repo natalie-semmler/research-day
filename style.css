@@ -15,10 +15,18 @@
     animation: fadeIn 1s;
     transition: .3s all;
     margin: 15px;
+    visibility: visible;
+    text-decoration: none;
+    overflow: hidden;
+    color: #000000;
 }
 
 .card:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
+}
+
+.card a {
+  color: #c7531c;
 }
 
 .card__link {
