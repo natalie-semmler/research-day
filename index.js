@@ -41,8 +41,8 @@ for (let [index, trigger__title] of triggerArrayTitle) {
 let triggerIndexTitle = index;
 function toggleModalTitle() {
   // Optionally toggle a class for CSS animations
-modals[triggerIndexTitle].classList.toggle('show-modal');
+modalsTitle[triggerIndexTitle].classList.toggle('show-modal');
 }
-trigger.addEventListener("click", toggleModalTitle);
-closeButtons[triggerIndexTitle].addEventListener("click", toggleModal);
+trigger__title.addEventListener("click", toggleModalTitle);
+closeButtonsTitle[triggerIndexTitle].addEventListener("click", toggleModalTitle);
 }
