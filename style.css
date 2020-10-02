@@ -7,27 +7,28 @@
   max-width: 1200px;
   margin: 0 auto 60px;
 }
+
 .card {
-    height: 325px;
-    width: 25%;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
-    animation: fadeIn 1s;
-    transition: .3s all;
-    margin: 15px;
-    visibility: visible;
-    text-decoration: none;
-    overflow: hidden;
-    color: #000000;
+  height: 325px;
+  width: 25%;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.16), 0 2px 4px rgba(0,0,0,0.23);
+  animation: fadeIn 1s;
+  transition: .3s all;
+  margin: 15px;
+  visibility: visible;
+  text-decoration: none;
+  overflow: hidden;
+  color: #000000;
 }
 
 .card:hover {
   box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
 }
+
 .card li, .card p, .card ul {
   margin-top: 15px;
   margin-bottom: 15px;
-  font-size: 1.125em;
 }
 .card a {
   color: #c7531c;
@@ -45,20 +46,26 @@
 
 .card__thumbnail__image {
   object-fit: cover;
-  height: 100%;
+  width: 100%;
 }
 
 .card__content__description {
-    padding-left: 10px;
-    padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
+
 .card__title {
   font-size: 1.2em;
   color: #1f7f9b;
   cursor: pointer;
   font-weight: 700;
   margin-top: 15px;
+  padding-left: 10px;
   }
+
+.card__title:hover {
+  color: #c7531c;
+}
 
 .card__modal {
   height: 100%;
@@ -100,7 +107,7 @@ figure.card__thumbnail {
   width: 100%;
   overflow: hidden;
   margin: 0;
-  padding-top: 56.25%;
+  padding-top: 49%;
   position: relative;
 }
 figure.card__thumbnail img {
