@@ -46,7 +46,7 @@ modalsTitle[triggerIndexTitle].classList.toggle('show-modal');
 trigger__title.addEventListener("click", toggleModalTitle);
 closeButtonsTitle[triggerIndexTitle].addEventListener("click", toggleModalTitle);
 }*/
-<script>
+
     function callPlayer(func, args) {
         var iframes = document.getElementsByTagName('iframe');
         for (var i = 0; i < iframes.length; ++i) {
@@ -64,4 +64,3 @@ closeButtonsTitle[triggerIndexTitle].addEventListener("click", toggleModalTitle)
             }
         }
     }
-    </script>
