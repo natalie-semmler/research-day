@@ -6,7 +6,26 @@
   <link rel="stylesheet" href="style.css">
   <script src="./index.js" defer></script>
   <title>Card to Modal</title>
-  <style>
+  <script>
+    function callPlayer(func, args) {
+        var iframes = document.getElementsByTagName('iframe');
+        for (var i = 0; i < iframes.length; ++i) {
+            if (iframes[i]) {
+                var src = iframes[i].getAttribute('src');
+                if (src) {
+                    if (src.indexOf('youtube.com/embed') != -1) {
+                        iframes[i].contentWindow.postMessage(JSON.stringify({
+                            'event': 'command',
+                            'func': func,
+                            'args': args || []
+                        }), "*");
+                    }
+                }
+            }
+        }
+    }
+    </script>
+<style>
 
   </style>
 </head>
@@ -89,7 +108,8 @@
   <div id="closeModal" class="card__modal__close">&times;</div>
   <div class="card__modal__content">
   <div class="card__modal__content__video">
-    <iframe id="modalVideo" width="560" height="315" src="https://www.youtube.com/embed/zXExJoaWaKk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe id="modalVideo" width="560" height="315" src="https://www.youtube.com/embed/zXExJoaWaKk?enablejsapi=10.
+    2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </div>
@@ -97,7 +117,7 @@
   <div id="closeModal" class="card__modal__close">&times;</div>
   <div class="card__modal__content">
   <div class="card__modal__content__video">
-    <iframe id="modalVideo" width="560" height="315" src="https://www.youtube.com/embed/ijNz0XXkhCA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe id="modalVideo" width="560" height="315" src="https://www.youtube.com/embed/ijNz0XXkhCA?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
 </div>
@@ -136,23 +156,5 @@
 </div>
 </div>
 </body>
-<script>
-  function callPlayer(func, args) {
-      var iframes = document.getElementsByTagName('iframe');
-      for (var i = 0; i < iframes.length; ++i) {
-          if (iframes[i]) {
-              var src = iframes[i].getAttribute('src');
-              if (src) {
-                  if (src.indexOf('youtube.com/embed') != -1) {
-                      iframes[i].contentWindow.postMessage(JSON.stringify({
-                          'event': 'command',
-                          'func': func,
-                          'args': args || []
-                      }), "*");
-                  }
-              }
-          }
-      }
-  }
-  </script>
+
 </html>
