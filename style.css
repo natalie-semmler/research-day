@@ -88,8 +88,8 @@
 }
 
 .card__modal__content {
-	width: 50%;
-	margin: 7% auto 0;
+  width: 60%;
+  margin: 10% auto 0;
 }
 
 .card__modal__close {
