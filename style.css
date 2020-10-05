@@ -110,7 +110,7 @@ figure.card__thumbnail {
   overflow: hidden;
   margin: 0;
   position: relative;
-  padding-top: 50%;
+  padding-top: 48%;
 }
 figure.card__thumbnail img {
   position: absolute;
