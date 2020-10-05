@@ -59,11 +59,10 @@
   padding-left: 10px;
   padding-right: 10px;
   width: 95%;
-  /*! margin: auto; */
 }
 
 .card__title {
-  font-size: 1.2em;
+  font-size: 1em;
   color: #1f7f9b;
   cursor: pointer;
   font-weight: 700;
