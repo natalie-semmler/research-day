@@ -27,11 +27,12 @@
   box-shadow: 0 6px 12px rgba(0,0,0,0.16), 0 6px 12px rgba(0,0,0,0.23);
 }
 
-.card li, .card p, .card ul {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  /*! font-size: 1em; */
+.card li, .card p, .card ul, .card a {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: .9em;
 }
+
 .card a {
   color: #c7531c;
 }
@@ -62,17 +63,13 @@
 }
 
 .card__title {
-  font-size: 1em;
+  font-size: .9em;
   color: #1f7f9b;
   cursor: pointer;
   font-weight: 700;
   margin-top: 15px;
   line-height: 1.25em;
   }
-
-.card__title:hover {
-  color: #c7531c;
-}
 
 .card__modal {
   height: 100%;
