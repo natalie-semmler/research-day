@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <script src="./index.js" defer></script>
+  <link rel="stylesheet" href="https://www.evms.edu/research/research_day/style.css">
+  <script src="https://www.evms.edu/research/research_day/index.js" defer></script>
   <title>Card to Modal</title>
 </head>
 <body>
@@ -30,10 +30,7 @@
         <div class="card__modal__content">
         <div class="card__modal__content__video">
             <div id="player"></div>
-          <iframe id="modalVideo" width="560" height="315" src="https://www.youtube.com/embed/1j_CeB-ZMoI?enablejsapi=1" frameborder="0" modestbranding="1" 
-          rel="0"
-          autoplay="0"
-          allowfullscreen></iframe>
+          
           </div>
         </div>
       </div>
@@ -53,9 +50,13 @@
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
+          videoId: '1j_CeB-ZMoI',
           height: '390',
           width: '640',
-          videoId: 'M7lc1UVf-VE',
+          frameborder: '0',
+          modestbranding: '1',
+          autoplay: '0',
+          allowfullscreen: '0',
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
