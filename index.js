@@ -33,13 +33,13 @@ trigger.addEventListener("click", toggleModal);
 closeButtons[triggerIndex].addEventListener("click", toggleModal);
 closeModal();
 }
-var modal = document.querySelector('.card__modal')
+/* var modal = document.querySelector('.card__modal')
 var closeBtn = document.querySelector('.card__modal__close')
 var player
-
+ */
 // Once the API is ready, create a player object for the
 // iframe with the id="player"
-var onYouTubeIframeAPIReady = function () {
+/* var onYouTubeIframeAPIReady = function () {
   player = new YT.Player('player')
 }
 
@@ -49,7 +49,7 @@ var closeModal = function () {
   if (player) {
     player.pauseVideo()
   }
-}
+} */
 
 //closeBtn.addEventListener('click', closeModal);
 // Or inside another event handler simply call:
