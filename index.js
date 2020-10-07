@@ -33,13 +33,36 @@ trigger.addEventListener("click", toggleModal);
 closeButtons[triggerIndex].addEventListener("click", toggleModal);
 }
 
-// 2. This code loads the IFrame Player API code asynchronously.
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+var modal = document.querySelector('.modal')
+var closeBtn = document.querySelector('.close')
+var player
+
+// Once the API is ready, create a player object for the
+// iframe with the id="player"
+var onYouTubeIframeAPIReady = function () {
+  player = new YT.Player('player')
+}
+
+// When the close button gets clicked, check if the player
+// got already initialised, and if so, pause it.
+closeBtn.addEventListener('click', function () {
+  modal.style.display = 'none'
+
+  if (player) {
+    player.pauseVideo()
+  }
+})
+</script>
+
+/* // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
+var firstScriptTag = document.getElementsByTagName('script')[0];
 // 3. This function creates an <iframe> (and YouTube player)
 //    after the API code downloads.
 var player;
@@ -76,5 +99,5 @@ function onPlayerStateChange(event) {
 }
 function pauseVideo() {
   player.pauseVideo();
-}
+} */
 
