@@ -13,7 +13,9 @@ function hideModal() {
   modal.style.display = 'none'
 }
 NEW*/
+
 // Get each modal and close button
+
 const triggers = document.getElementsByClassName('trigger');
 const triggerArray = Array.from(triggers).entries();
 const modals = document.getElementsByClassName('card__modal');
@@ -23,6 +25,7 @@ const closeButtons = document.getElementsByClassName('card__modal__close');
 for (let [index, trigger] of triggerArray) {
 let triggerIndex = index;
 function toggleModal() {
+
   // Optionally toggle a class for CSS animations
 modals[triggerIndex].classList.toggle('show-modal');
 }
@@ -30,37 +33,48 @@ trigger.addEventListener("click", toggleModal);
 closeButtons[triggerIndex].addEventListener("click", toggleModal);
 }
 
-// Get each modal and close button
-/*const triggersTitle = document.getElementsByClassName('trigger__title');
-const triggerArrayTitle = Array.from(triggersTitle).entries();
-const modalsTitle = document.getElementsByClassName('card__modal');
-const closeButtonsTitle = document.getElementsByClassName('card__modal__close');
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
 
-// Then use `for...of`-loop with the index of each item in `triggerArray` for listening to a click event which toggles each modal to open and close
-for (let [index, trigger__title] of triggerArrayTitle) {
-let triggerIndexTitle = index;
-function toggleModalTitle() {
-  // Optionally toggle a class for CSS animations
-modalsTitle[triggerIndexTitle].classList.toggle('show-modal');
-}
-trigger__title.addEventListener("click", toggleModalTitle);
-closeButtonsTitle[triggerIndexTitle].addEventListener("click", toggleModalTitle);
-}*/
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    function callPlayer(func, args) {
-        var iframes = document.getElementsByTagName('iframe');
-        for (var i = 0; i < iframes.length; ++i) {
-            if (iframes[i]) {
-                var src = iframes[i].getAttribute('src');
-                if (src) {
-                    if (src.indexOf('youtube.com/embed') != -1) {
-                        iframes[i].contentWindow.postMessage(JSON.stringify({
-                            'event': 'command',
-                            'func': func,
-                            'args': args || []
-                        }), "*");
-                    }
-                }
-            }
-        }
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    videoId: '1j_CeB-ZMoI',
+    height: '390',
+    width: '640',
+    frameborder: '0',
+    modestbranding: '1',
+    autoplay: '0',
+    allowfullscreen: '0',
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
     }
+  });
+}
+
+// 4. The API will call this function when the video player is ready.
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+
+// 5. The API calls this function when the player's state changes.
+//    The function indicates that when playing a video (state=1),
+//    the player should play for six seconds and then stop.
+var done = false;
+function onPlayerStateChange(event) {
+  if (event.data == YT.PlayerState.PLAYING && !done) {
+    setTimeout(pauseVideo, 6000);
+    done = true;
+  }
+}
+function pauseVideo() {
+  player.pauseVideo();
+}
+
