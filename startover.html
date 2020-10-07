@@ -8,7 +8,40 @@
   <title>Video Control</title>
 </head>
 <body>
-<div id="id01" class="modal">
+
+    <div class="card-to-modal">
+        <div id="eJc1aUreYfs" class="card">
+          <div class="card__content">
+            <figure class="card__thumbnail trigger">
+              <img src="https://img.youtube.com/vi/eJc1aUreYfs/hqdefault.jpg" alt="" class="card__thumbnail__image">
+            </figure>
+            <div class="card__content__description">
+            <p class="card__title">Intended and Unintended Consequences of the 2016 CDC Guideline on Opioid Prescribing</p>
+      
+            <p class="">Alnaif, Sarah (Author, Program/yr, Mentor)</p>
+              <a class="card__file" href="assets/sample-ppt.pdf">Sample-PDF</a>
+              </div>  
+          </div>
+        </div>
+
+        <div id="modal4" class="card__modal">
+            <div id="closeModal" class="card__modal__close">&times;</div>
+            <div class="card__modal__content">
+            <div class="card__modal__content__video">
+              <iframe 
+              id="player" 
+              width="560" 
+              height="315" 
+              src="https://www.youtube.com/embed/eJc1aUreYfs?enablejsapi=1" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; encrypted-media;" 
+              allowfullscreen>
+            </iframe>
+              </div>
+            </div>
+          </div>
+          </div>
+<!-- <div id="id01" class="modal">
     <div class="modal-content video">
       <div class="imgcontainer">
         <span class="close" title="Close">&times;</span>
@@ -25,11 +58,11 @@
         ></iframe>
       </div>
     </div>
-  </div>
+  </div> -->
 <script src="https://www.youtube.com/iframe_api"></script>
 <script>
-var modal = document.querySelector('.modal')
-var closeBtn = document.querySelector('.close')
+var modal = document.querySelector('.card__modal')
+var closeBtn = document.querySelector('.card__modal__close')
 var player
 
 // Once the API is ready, create a player object for the
@@ -37,16 +70,6 @@ var player
 var onYouTubeIframeAPIReady = function () {
   player = new YT.Player('player')
 }
-
-// When the close button gets clicked, check if the player
-// got already initialised, and if so, pause it.
-/* closeBtn.addEventListener('click', function () {
-  modal.style.display = 'none'
-
-  if (player) {
-    player.pauseVideo()
-  }
-}) */
 
 var closeModal = function () {
   modal.style.display = 'none'
