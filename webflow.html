@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+
+<title>untitled document</title>
+
+<style media="screen">
+.hide {
+    display: none;
+ }
+</style>
+
+</head>
+<body>
+
+<button id="openModal">Video Tutorial - Click here</button>
+
+ <div id="id01" class="modal hide">
+  <div class="modal-content video">
+    <div class="imgcontainer">
+      <span class="close" title="Close">&times;</span>
+    </div>
+    <div class="container">
+	 <iframe id="ifr" src="https://www.youtube.com/embed/x3vcSab13Sk" width="600" height="480"  allowfullscreen></iframe>
+	</div>
+  </div>
+ </div>
+ 
+<script>
+ ( function( w, d ) {
+   'use strict';
+   
+    // Get the modal
+    var modal = d.getElementById( 'id01' );
+	
+	var iframe =  d.getElementById( 'ifr' );
+
+    // When the user clicks anywhere outside of the modal, close it
+   w.onclick = function ( event ) {
+      if ( event.target == modal ) {
+           modal.style.display = 'none';
+      }
+   };
+   d.getElementsByClassName( 'close' )[0].addEventListener( 'click',
+      function() {
+         modal.classList.add( 'hide' );
+	 iframe.src = '';
+   }, false );
+   
+   d.getElementById( 'openModal' ).addEventListener( 'click',
+      function() {
+         modal.classList.remove( 'hide' );
+   	 iframe.src = 'https://www.youtube.com/embed/x3vcSab13Sk';     
+	  
+   }, false );   
+
+ }( window, document ));
+</script>
+
+</body>
+</html>
