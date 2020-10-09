@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,115 +8,61 @@
   <script src="./index.js" defer></script>
   <title>Card to Modal</title>
 </head>
+
 <body>
-  <section class="typical-page__hero-video">
-    <div class="typical-page__hero-iframe">
-    <!-- 2 variations. Hero image or large quote. For hero image, you can either use an HTML (image tag) or CSS (I will be using this one) -->
-    <!--  Variant 1 -->
-    <!--! Placeholder text: delete below this line -->
+  <div class="card-to-modal">
+    div id="card147707" class="card">
+    <div class="card__content">
+      <figure class="card__thumbnail trigger">
+        <img src="https://img.youtube.com/vi/V3kviEoOSGI
+/hqdefault.jpg"
+          alt="Thumbnail image of video presentation for Stressor Controllability and the Regulation of Fear Memory, Neuroimmune Signaling, and Sleep"
+          class="card__thumbnail__image">
+      </figure>
+      <div class="card__content__description">
+        <p class="card__title">Stressor Controllability and the Regulation of Fear Memory, Neuroimmune Signaling, and
+          Sleep</p>
+        <p class=""><span class="bold">Author: </span>Austin Adkins<br>
+          <span class="bold">Program: </span>Biomedical Sciences<br>
+          <span class="bold">Mentor(s): </span> Larry Sanford, PhD and Laurie Wellman, PhD<br>
+          <span class="bold">Research Type: </span>Basic<br><span class="bold">Q&amp;A Group/Time: </span> E / 4:10-4:30
 
-<iframe width="1280" height="720"  src= "https://primetime.bluejeans.com/a2m/embeds/attendee?sharingID=qqjbqgtv&width=1280&height=720&enableNPS=false&color1=000000&color2=00A7F4&backgroundColor=FAFAFA&captureUserDetails=false&launchFullExperience=false" frameborder=0 encrypted-media allowfullscreen></iframe>
-    
-    <!-- <img src="../12.3/assets/anca-dobrian/DobrianLab_015@2x.jpg" alt="" class="story-template__hero__image"> -->
-    <!--! Placeholder text: delete above this line -->
+        </p>
+      </div>
     </div>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus nec feugiat in fermentum posuere urna nec tincidunt praesent. Non odio euismod lacinia at quis risus sed vulputate odio. Euismod nisi porta lorem mollis. Sed egestas egestas fringilla phasellus faucibus. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Mauris augue neque gravida in. Tortor pretium viverra suspendisse potenti nullam ac tortor. Maecenas sed enim ut sem. Scelerisque varius morbi enim nunc faucibus a pellentesque sit. Varius duis at consectetur lorem donec massa. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean. Volutpat blandit aliquam etiam erat velit scelerisque in dictum.</p>
-  </section>
+  </div>
 
-<div class="card-to-modal">
-  <div id="card1" class="card">
-    <div class="card__content">
-      <figure class="card__thumbnail trigger">
-        <img src="https://img.youtube.com/vi/1j_CeB-ZMoI/hqdefault.jpg" alt="" class="card__thumbnail__image">
-      </figure>
+  <div id="modal1" class="card__modal">
+    <div id="closeModal" class="card__modal__close">&times;</div>
+    <div class="card__modal__content">
+      <div class="card__modal__content__video">
+        <iframe id="modalVideo" width="560" height="315" src="https://www.youtube.com/embed/1j_CeB-ZMoI?enablejsapi=1"
+          frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <div id="modal147707" class="card__modal hide-modal">
+    <div id="closeModal" class="card__modal__close">×</div>
+    <div class="card__modal__content">
+      <div class="card__modal__content__video">
+        <iframe id="modalVideo" data-src="https://www.youtube.com/embed/V3kviEoOSGI" src="" modestbranding="1" rel="0"
+          allowfullscreen="" width="560" height="315" frameborder="0">
+        </iframe>
+      </div>
       <div class="card__content__description">
-      <p class="card__title">Using AI and simulation modeling to identify new risk factors for autoimmune pemphigus lesions</p>
-      <p class="">Adawi, Waleed  (Author, Program/yr, Mentor)</p>
-        <a class="card__file" href="assets/sample-ppt.pdf">Sample-PDF</a>
-        </div>
-        
+        <p class="card__title">Stressor Controllability and the Regulation of Fear Memory, Neuroimmune Signaling, and
+          Sleep
+        </p>
+        <p class=""><span class="bold">Author: </span>Austin Adkins<br>
+          <span class="bold">Program: </span>Biomedical Sciences<br>
+          <span class="bold">Mentor(s): </span> Larry Sanford, PhD and Laurie Wellman, PhD<br>
+          <span class="bold">Research Type: </span>Basic<br><span class="bold">Q&amp;A Group/Time: </span> E / 4:10-4:30
+        </p>
+      </div>
     </div>
   </div>
-  <div id="card2" class="card">
-    <div class="card__content">
-      <figure class="card__thumbnail trigger">
-        <img src="https://img.youtube.com/vi/V3kviEoOSGI/hqdefault.jpg" alt="" class="card__thumbnail__image">
-      </figure>
-      <div class="card__content__description">
-      <p class="card__title">Stressor Controllability and the Regulation of Fear Memory, Neuroimmune Signaling, and Sleep</p>
-      <p class="">Adkins, Austin (Author, Program/yr, Mentor)</p>
-        <a class="card__file" href="assets/sample-ppt.pdf">Sample-PDF</a>
-        </div>
-        
-    </div>
   </div>
-  <div id="card3" class="card">
-    <div class="card__content">
-      <figure class="card__thumbnail trigger">
-        <img src="https://img.youtube.com/vi/TekAAqm0OeU/hqdefault.jpg" alt="" class="card__thumbnail__image">
-      </figure>
-      <div class="card__content__description">
-      <p class="card__title">An investigation of neonatal sepsis at a tertiary hospital</p>
-      <p class="">Al Husseini, Ahmad (Author, Program/yr, Mentor)</p>
-        <a class="card__file" href="assets/sample-ppt.pdf">Sample-PDF</a>
-        </div>
-        
-    </div>
-  </div>
-  <div id="card4" class="card">
-    <div class="card__content">
-      <figure class="card__thumbnail trigger">
-        <img src="https://img.youtube.com/vi/eJc1aUreYfs/hqdefault.jpg" alt="" class="card__thumbnail__image">
-      </figure>
-      <div class="card__content__description">
-      <p class="card__title">Intended and Unintended Consequences of the 2016 CDC Guideline on Opioid Prescribing</p>
-
-      <p class="">Alnaif, Sarah (Author, Program/yr, Mentor)</p>
-        <a class="card__file" href="assets/sample-ppt.pdf">Sample-PDF</a>
-        </div>  
-    </div>
-  </div>
-<div id="modal1" class="card__modal">
-  <div id="closeModal" class="card__modal__close">&times;</div>
-  <div class="card__modal__content">
-  <div class="card__modal__content__video">
-    <iframe id="modalVideo" width="560" height="315" src="https://www.youtube.com/embed/1j_CeB-ZMoI?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-  <div id="modal2" class="card__modal">
-  <div id="closeModal" class="card__modal__close">&times;</div>
-  <div class="card__modal__content">
-  <div class="card__modal__content__video">
-    <iframe id="modalVideo" width="560" height="315" src="https://www.youtube.com/embed/V3kviEoOSGI?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-  <div id="modal3" class="card__modal">
-  <div id="closeModal" class="card__modal__close">&times;</div>
-  <div class="card__modal__content">
-  <div class="card__modal__content__video">
-    <iframe id="modalVideo" width="560" height="315" src="https://www.youtube.com/embed/TekAAqm0OeU?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
-</div>
-  <div id="modal4" class="card__modal">
-  <div id="closeModal" class="card__modal__close">&times;</div>
-  <div class="card__modal__content">
-  <div class="card__modal__content__video">
-    <iframe 
-    id="modalVideo" 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/eJc1aUreYfs?enablejsapi=1" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-    allowfullscreen>
-  </iframe>
-    </div>
-  </div>
-</div>
-</div>
 </body>
 
 </html>

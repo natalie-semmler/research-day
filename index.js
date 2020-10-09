@@ -20,15 +20,20 @@ for (let [index, trigger] of triggerArray) {
     modals[triggerIndex].classList.toggle('show-modal');
     if (modals[triggerIndex].classList.contains('show-modal')) {
       disableScroll();
+      let lazyVids = document.getElementsByTagName('iframe');
+          if (lazyVids.getAttribute('data-src')) {
+              lazyVids.setAttribute('src', lazyVids.getAttribute('data-src'));
+          }
     } else {
       card__modal.style.display = "none";
-      modalVideo.src = iframe.src + '?autoplay=0';
+      /* modalVideo.src = iframe.src + '?autoplay=0'; */
       enableScroll();
+      lazyVids.setAttribute('src',"");
     }
   }
 }
 trigger.addEventListener("click", toggleModal);
-closeButtons[triggerIndex].addEventListener("click", toggleModal)
+closeButtons[triggerIndex].addEventListener("click", toggleModal);
     /* closeModal[triggerIndex].addEventListener("click", function () {
   card__modal.style.display = "none";
   modalVideo.src = iframe.src + '?autoplay=0';
