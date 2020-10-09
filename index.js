@@ -1,18 +1,3 @@
-/*const modal = document.getElementById('modal')
-const card = document.getElementById('card')
-const closeModal = document.getElementById('closeModal')
-
-card.addEventListener('click', showModal)
-closeModal.addEventListener('click', hideModal)
-
-function showModal(source) {
-  modal.style.display = "block";
-}
-
-function hideModal() {
-  modal.style.display = 'none'
-}
-NEW*/
 // Get each modal and close button
 const triggers = document.getElementsByClassName('trigger');
 const triggerArray = Array.from(triggers).entries();
@@ -30,19 +15,29 @@ trigger.addEventListener("click", toggleModal);
 closeButtons[triggerIndex].addEventListener("click", toggleModal);
 }
 
-// Get each modal and close button
-/*const triggersTitle = document.getElementsByClassName('trigger__title');
-const triggerArrayTitle = Array.from(triggersTitle).entries();
-const modalsTitle = document.getElementsByClassName('card__modal');
-const closeButtonsTitle = document.getElementsByClassName('card__modal__close');
+document.addEventListener("DOMContentLoaded", function () {
+  if ("IntersectionObserver" in window) {
+      let lazyVids = document.querySelectorAll("iframe");
+      let vidObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+              if (entry.isIntersecting && entry.target.src.length == 0) {                    
+                  entry.target.src = entry.target.dataset.src;
+                  vidObserver.unobserve(entry.target);
+              }
+          });
+      });
 
-// Then use `for...of`-loop with the index of each item in `triggerArray` for listening to a click event which toggles each modal to open and close
-for (let [index, trigger__title] of triggerArrayTitle) {
-let triggerIndexTitle = index;
-function toggleModalTitle() {
-  // Optionally toggle a class for CSS animations
-modalsTitle[triggerIndexTitle].classList.toggle('show-modal');
-}
-trigger__title.addEventListener("click", toggleModalTitle);
-closeButtonsTitle[triggerIndexTitle].addEventListener("click", toggleModalTitle);
-}*/
+      lazyVids.forEach(function (vid) {
+          vidObserver.observe(vid);
+      });
+  // if the IntersectionObserver is not available just load all
+  } else {
+      let lazyVids = document.getElementsByTagName('iframe');
+
+      for (var i = 0; i < lazyVids.length; i++) {
+          if (lazyVids[i].getAttribute('data-src')) {
+              lazyVids[i].setAttribute('src', lazyVids[i].getAttribute('data-src'));
+          }
+      }
+  }
+})
