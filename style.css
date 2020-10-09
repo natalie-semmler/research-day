@@ -84,7 +84,7 @@
   left: 0;
   overflow: hidden;
   animation: fadeIn .2s;
-  display:none;
+  display: none;
 }
 
 .card__modal__content {
