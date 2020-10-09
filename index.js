@@ -18,31 +18,23 @@ const triggers = document.getElementsByClassName('trigger');
 const triggerArray = Array.from(triggers).entries();
 const modals = document.getElementsByClassName('card__modal');
 const closeButtons = document.getElementsByClassName('card__modal__close');
+const modalVideo = document.getElementById('modalVideo');
 
 // Then use `for...of`-loop with the index of each item in `triggerArray` for listening to a click event which toggles each modal to open and close
 for (let [index, trigger] of triggerArray) {
 let triggerIndex = index;
 function toggleModal() {
   // Optionally toggle a class for CSS animations
-modals[triggerIndex].classList.toggle('show-modal');
+  modals[triggerIndex].classList.toggle('show-modal');
+  if (!modals[triggerIndex].classList.contains('show-modal')){
+    modalVideo.src = iframe.src + '?autoplay=0';
+  }
 }
 trigger.addEventListener("click", toggleModal);
 closeButtons[triggerIndex].addEventListener("click", toggleModal);
-}
 
-// Get each modal and close button
-/*const triggersTitle = document.getElementsByClassName('trigger__title');
-const triggerArrayTitle = Array.from(triggersTitle).entries();
-const modalsTitle = document.getElementsByClassName('card__modal');
-const closeButtonsTitle = document.getElementsByClassName('card__modal__close');
-
-// Then use `for...of`-loop with the index of each item in `triggerArray` for listening to a click event which toggles each modal to open and close
-for (let [index, trigger__title] of triggerArrayTitle) {
-let triggerIndexTitle = index;
-function toggleModalTitle() {
-  // Optionally toggle a class for CSS animations
-modalsTitle[triggerIndexTitle].classList.toggle('show-modal');
 }
-trigger__title.addEventListener("click", toggleModalTitle);
-closeButtonsTitle[triggerIndexTitle].addEventListener("click", toggleModalTitle);
-}*/
+/* closeModal.addEventListener("click", function () {
+  modalVideo.src = iframe.src + '?autoplay=0';
+/*   enableScroll(); */
+});
