@@ -89,9 +89,8 @@
 
 .card__modal__content {
   width: 60%;
-  margin: 10% auto 0;
+  margin: 5% auto 0;
 }
-
 .card__modal__close {
   color: white;
   font-size: 40px;
